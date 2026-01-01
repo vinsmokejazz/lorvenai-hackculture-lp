@@ -1,0 +1,145 @@
+/**
+ * NavigationTabs - Pixel-perfect styles
+ * 
+ * Reference Image Analysis:
+ * ─────────────────────────────────────────────────────────────────
+ * Container:
+ *   - Background: #0c1829 (dark navy)
+ *   - Height: 48px
+ *   - Full width
+ *   - Centered content
+ * 
+ * Tab Items:
+ *   - Font size: 14px
+ *   - Font weight: 500
+ *   - Inactive color: #ffffff
+ *   - Active color: #00b4d8 (cyan)
+ *   - Gap between tabs: 48px
+ * 
+ * Active Indicator:
+ *   - Underline thickness: 3px
+ *   - Color: #00b4d8
+ *   - Width: matches text width
+ *   - No border-radius
+ *   - Offset: 8px below text
+ * ─────────────────────────────────────────────────────────────────
+ */
+
+/* ═══════════════════════════════════════════════════════════════════
+   CONTAINER
+   ═══════════════════════════════════════════════════════════════════ */
+.nav-tabs-container {
+  width: 50%;
+  max-width: 800px;
+  min-width: 280px;
+  height: 48px;
+  margin-top: 32px;
+  background-color: #0c1829;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  border-radius: 8px;
+}
+
+.nav-tabs-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 4vw, 48px);
+  height: 100%;
+  padding: 0 clamp(12px, 2vw, 24px);
+}
+
+.nav-tabs-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-tabs-label {
+  font-family: var(--font-heading-secondary);
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   UNDERLINE INDICATOR
+   ═══════════════════════════════════════════════════════════════════ */
+.nav-tabs-underline {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #00b4d8;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease-out;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   HOVER STATE
+   ═══════════════════════════════════════════════════════════════════ */
+.nav-tabs-item:hover .nav-tabs-label {
+  color: #00b4d8;
+  transition: color 0.25s ease-out;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   ACTIVE STATE
+   ═══════════════════════════════════════════════════════════════════ */
+.nav-tabs-item.active .nav-tabs-label {
+  color: #00b4d8;
+}
+
+.nav-tabs-item.active .nav-tabs-underline {
+  transform: scaleX(1);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   FOCUS STATE (Accessibility)
+   ═══════════════════════════════════════════════════════════════════ */
+.nav-tabs-item:focus-visible {
+  outline: 2px solid #00b4d8;
+  outline-offset: 2px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .nav-tabs-container {
+    width: 70%;
+  }
+
+  .nav-tabs-inner {
+    gap: 32px;
+    padding: 0 20px;
+  }
+
+  .nav-tabs-label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-tabs-container {
+    display: none;
+  }
+}

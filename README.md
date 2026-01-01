@@ -54,3 +54,4 @@ This project uses CRACO and reads environment variables from `.env`.
 - The animated hero CTA is implemented in `src/components/Hero.jsx` with styles in `src/styles/Home.css`.
 - The header/navbar is styled in `src/styles/Home.css`.
 
+v

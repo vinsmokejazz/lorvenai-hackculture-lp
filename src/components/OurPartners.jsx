@@ -73,19 +73,41 @@ const OurPartners = () => {
                   overflow: partner.fill ? 'hidden' : 'visible',
                 }}
               >
-                <img 
-                  src={partner.logo} 
-                  alt={partner.name}
-                  style={{
-                    maxWidth: '100%',
-                    maxHeight: '100%',
-                    width: partner.fill ? '100%' : 'auto',
-                    height: partner.fill ? '100%' : 'auto',
-                    objectFit: 'contain',
-                    transform: partner.fill ? 'scale(1.5)' : 'none',
-                    transformOrigin: 'center',
-                  }}
-                />
+                {partner.id === 1 ? (
+                  <a
+                    href="https://lorvenaistudio.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open Lorven AI Studio website"
+                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                  >
+                    <img 
+                      src={partner.logo} 
+                      alt={partner.name}
+                      className="our-partners-logo"
+                      style={{
+                        maxWidth: '100%',
+                        maxHeight: '100%',
+                        width: partner.fill ? '100%' : 'auto',
+                        height: partner.fill ? '100%' : 'auto',
+                        objectFit: 'contain',
+                      }}
+                    />
+                  </a>
+                ) : (
+                  <img 
+                    src={partner.logo} 
+                    alt={partner.name}
+                    className={partner.id === 3 ? 'our-partners-logo our-partners-logo--srivg' : 'our-partners-logo'}
+                    style={{
+                      maxWidth: '100%',
+                      maxHeight: '100%',
+                      width: partner.fill ? '100%' : 'auto',
+                      height: partner.fill ? '100%' : 'auto',
+                      objectFit: 'contain',
+                    }}
+                  />
+                )}
               </motion.div>
             ))}
           </motion.div>

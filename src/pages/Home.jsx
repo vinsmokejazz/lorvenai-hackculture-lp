@@ -126,7 +126,14 @@ const Home = () => {
       <header className="header">
         <div className="header-content">
           <div className="logo-container">
-            <img src="/lorven.ai.png" alt="LORVEN AI STUDIO" className="header-logo" />
+            <a
+              href="https://lorvenaistudio.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Lorven AI Studio website"
+            >
+              <img src="/lorven.ai.png" alt="LORVEN AI STUDIO" className="header-logo" />
+            </a>
             <img src="/hackculture.png" alt="HackCulture" className="header-logo header-logo--hackculture" />
           </div>
           <a href="https://hackculture.io/hackathons/cine-ai-hackfest" target="_blank" rel="noopener noreferrer" className="register-btn-header">

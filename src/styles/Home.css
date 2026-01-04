@@ -903,6 +903,7 @@
 
 .prize-pool-point__text {
   margin: 0;
+  font-size: clamp(12px, 2.5vw, 22px);
   text-align: left;
   max-width: 40ch;
 }
@@ -1097,6 +1098,21 @@
   transition: none;
   backdrop-filter: none;
   box-shadow: none;
+}
+
+.our-partners-logo {
+  display: block;
+}
+
+.our-partners-logo--srivg {
+  transform: scale(1.6);
+  transform-origin: center;
+}
+
+@media (min-width: 1024px) {
+  .our-partners-logo--srivg {
+    transform: scale(2);
+  }
 }
 
 /* Timeline (Old - Keep for backwards compatibility but hidden) */

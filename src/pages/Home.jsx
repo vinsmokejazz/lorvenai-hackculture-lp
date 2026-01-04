@@ -384,6 +384,21 @@ const Home = () => {
                 >₹ 40,000</motion.div>
               </motion.div>
             </motion.div>
+
+            <motion.div
+              className="prize-pool-point"
+              variants={fadeUp(14)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={defaultViewport}
+            >
+              <span className="prize-pool-point__dot" aria-hidden="true" />
+              <p className="prize-pool-point__text">
+                OPPORTUNITY TO GET HIRED BY{' '}
+                <span className="prize-pool-point__highlight">LORVEN AI</span>{' '}
+                STUDIO
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>

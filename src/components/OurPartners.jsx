@@ -9,6 +9,7 @@ import {
 
 const partners = [
   {
+    id: 1,
     name: 'Lorven.AI',
     logo: '/lorven.ai.png',
   },
@@ -16,6 +17,12 @@ const partners = [
     id: 2,
     name: 'HackCulture',
     logo: '/hackculture.png',
+  },
+  {
+    id: 3,
+    name: 'SriVG',
+    logo: '/srivg.png',
+    fill: true,
   },
 ];
 
@@ -60,9 +67,10 @@ const OurPartners = () => {
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',
-                  padding: 'clamp(1.5rem, 3vw, 2.5rem)',
+                  padding: partner.fill ? 'clamp(1rem, 2.4vw, 2rem)' : 'clamp(1.5rem, 3vw, 2.5rem)',
                   width: 'clamp(180px, 30vw, 300px)',
                   height: 'clamp(100px, 16vw, 160px)',
+                  overflow: partner.fill ? 'hidden' : 'visible',
                 }}
               >
                 <img 
@@ -71,9 +79,11 @@ const OurPartners = () => {
                   style={{
                     maxWidth: '100%',
                     maxHeight: '100%',
-                    width: 'auto',
-                    height: 'auto',
+                    width: partner.fill ? '100%' : 'auto',
+                    height: partner.fill ? '100%' : 'auto',
                     objectFit: 'contain',
+                    transform: partner.fill ? 'scale(1.5)' : 'none',
+                    transformOrigin: 'center',
                   }}
                 />
               </motion.div>

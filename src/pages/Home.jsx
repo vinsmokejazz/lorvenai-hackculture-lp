@@ -24,7 +24,7 @@ import {
 } from '../lib/motion';
 
 // CONFIGURABLE COUNTDOWN TARGET DATE
-const COUNTDOWN_TARGET_DATE = new Date('2026-01-11T00:00:00').getTime();
+const COUNTDOWN_TARGET_DATE = new Date('2026-01-31T10:00:00').getTime();
 
 // Problem statements data
 const problemStatements = [

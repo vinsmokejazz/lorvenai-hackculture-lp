@@ -39,8 +39,8 @@ const Hero = () => {
 
     return () => clearInterval(interval);
   }, []);
-  // Countdown target: January 24th, 2026 at 10:00 AM
-  const targetDate = new Date('2026-01-24T10:00:00').getTime();
+  // Countdown target: January 31st, 2026 at 10:00 AM
+  const targetDate = new Date('2026-01-31T10:00:00').getTime();
   
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -137,7 +137,7 @@ const Hero = () => {
           <div className="event-info-header">
             <div className="event-info-item">
               <div className="event-info-label">DATE</div>
-              <div className="event-info-value">24th January 2026</div>
+              <div className="event-info-value">31st January 2026</div>
             </div>
             <div className="event-info-item">
               <div className="event-info-label">TIME</div>

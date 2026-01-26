@@ -23,8 +23,8 @@ const timelineData = [
   {
     title: 'HACKATHON DAY',
     subtitle: '',
-    start: 'JAN 24TH',
-    end: 'JAN 25TH',
+    start: 'JAN 31ST',
+    end: 'FEB 1ST',
   },
 ];
 
